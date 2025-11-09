@@ -12,10 +12,26 @@ dotenv.config();
 
 const app = express();
 
+// Allow multiple origins
+const allowedOrigins = [
+    'http://localhost:5173',   // Vite dev server
+    'http://localhost:3000',   // Dockerized frontend
+];
+
 app.use(cors({
-    origin: process.env.Frontend_URL, 
-    credentials: true, 
+    origin: function (origin, callback) {
+        if (!origin) return callback(null, true);
+
+        if (allowedOrigins.indexOf(origin) !== -1) {
+            callback(null, true);
+        } else {
+            console.error('Blocked by CORS:', origin);
+            callback(new Error('Not allowed by CORS'));
+        }
+    },
+    credentials: true,
 }));
+
 
 app.use(express.json());
 
