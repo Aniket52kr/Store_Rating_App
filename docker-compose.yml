@@ -22,7 +22,8 @@ services:
 
   # Backend API 
   backend: 
-    build: ./backend 
+    # build: ./backend 
+    image: aniket52kr/storerater-backend:latest
     container_name: storerater-backend
     restart: unless-stopped
     environment:
@@ -43,7 +44,8 @@ services:
 
   # Frontend React App
   frontend: 
-    build: ./frontend
+    # build: ./frontend
+    image: aniket52kr/storerater-frontend:latest
     container_name: storerater-frontend
     restart: unless-stopped 
     ports:
