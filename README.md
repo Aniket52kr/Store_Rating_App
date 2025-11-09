@@ -28,6 +28,7 @@ Live, secure, and production-ready — perfect for real-world use.
 - Ownership validation (store → owner)
 - Centralized auth context
 - Responsive design
+- Docker & Docker Compose support
 
 ---
 
@@ -160,4 +161,18 @@ Foreign keys ensure referential integrity and ownership tracking.
 - Input sanitization and SQL injection prevention via parameterized queries
 
 ---
+
+
+## 🐳 Docker Support
+
+Fully containerized with `Docker` and `docker-compose.yml`.
+
+### Run With Docker
+```bash
+# Build and start all services
+docker-compose up --build
+
+# Or pull from Docker Hub
+docker-compose pull
+docker-compose up -d
 
