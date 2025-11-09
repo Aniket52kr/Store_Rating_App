@@ -162,17 +162,21 @@ Foreign keys ensure referential integrity and ownership tracking.
 
 ---
 
+## 🖥️ How to Run (Zero Setup Needed)
 
-## 🐳 Docker Support
+### 1. Install Docker
+Download and install: [https://www.docker.com/products/docker-desktop](https://www.docker.com/products/docker-desktop)
 
-Fully containerized with `Docker` and `docker-compose.yml`.
+> Works on Windows, macOS, and Linux
 
-### Run With Docker
+### 2. Run the App
+
+Open Terminal or PowerShell and run:
+
 ```bash
-# Build and start all services
+# Clone the project
+git clone https://github.com/Aniket52kr/Store_Rating_App.git
+cd Store_Rating_App
+
+# Build and start all services (frontend, backend, database)
 docker-compose up --build
-
-# Or pull from Docker Hub
-docker-compose pull
-docker-compose up -d
-
